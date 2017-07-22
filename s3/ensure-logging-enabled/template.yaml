@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Enforces proper S3 bucket configuration
+Parameters:
+    Bucket:
+        Type: String
+    CodeZipKey:
+        Type: String
+    LogBucket:
+        Type: String
+Resources:
+  LambdaS3BucketConfigurer:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs6.10
+      CodeUri: 
+        Bucket: !Ref Bucket
+        Key: !Ref CodeZipKey
+      Events:
+        Type: CloudWatchEvent
+        Properties:
+          Pattern:
+            detail:
+              eventName:
+                - CreateBucket
+      Environment:
+        Variables:
+          LOG_BUCKET: !Ref LogBucket

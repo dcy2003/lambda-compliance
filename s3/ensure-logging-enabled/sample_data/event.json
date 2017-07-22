@@ -1,0 +1,40 @@
+{
+  "version": "0",
+  "id": "fca1e7f0-fe2c-41d1-9c8a-bd8f5892a83c",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.s3",
+  "account": "222222222222",
+  "time": "2017-04-24T16:05:56Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+    "eventVersion": "1.04",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDAJ5Q2N2ERAT5L5NOWM",
+      "arn": "arn:aws:iam::222222222222:user/testuser",
+      "accountId": "222222222222",
+      "userName": "testuser",
+      "sessionContext": {
+        "attributes": {
+          "mfaAuthenticated": "false",
+          "creationDate": "2017-04-24T15:11:01Z"
+        }
+      },
+      "invokedBy": "signin.amazonaws.com"
+    },
+    "eventTime": "2017-04-24T16:05:56Z",
+    "eventSource": "s3.amazonaws.com",
+    "eventName": "CreateBucket",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "AWS Internal",
+    "userAgent": "signin.amazonaws.com",
+    "requestParameters": {
+      "bucketName": "the-new-bucket"
+    },
+    "responseElements": null,
+    "requestID": "49347AB94F872BE9",
+    "eventID": "67658a6e-0f85-4a7c-b71d-9cbe8ee19386",
+    "eventType": "AwsApiCall"
+  }
+}

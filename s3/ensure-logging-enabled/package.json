@@ -1,0 +1,22 @@
+{
+  "name": "lambda-compliance",
+  "version": "1.0.0",
+  "description": "AWS Lambda function to ensure logging is enabled on an S3 bucket",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "posttest": "zip -rq S3ConfigEnforcer.zip * -x *.zip *.json *.log"
+  },
+  "author": "Derek Yeager",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.5.0",
+    "aws-sdk": "^2.88.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2",
+    "rewire": "^2.5.2",
+    "sinon": "^2.3.8"
+  }
+}
