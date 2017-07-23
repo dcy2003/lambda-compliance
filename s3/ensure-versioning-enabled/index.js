@@ -7,7 +7,7 @@ var async = require('async');
 var s3 = new AWS.S3();
 
 /**
- *	AWS Lambda function to ensure logging is enabled on an S3 bucket
+ *	AWS Lambda function to ensure versioning is enabled on an S3 bucket
 */
 
 exports.handler = (event, context, callback) => {
