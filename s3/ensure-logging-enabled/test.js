@@ -2,9 +2,11 @@
 
 var chai = require('chai');
 var sinon = require('sinon');
+var sinonChai = require("sinon-chai");
 var rewire = require('rewire');
 var expect = chai.expect;
 var assert = chai.assert;
+chai.use(sinonChai);
 
 var sampleRequestData = {
   "detail": {
