@@ -19,7 +19,6 @@ exports.handler = (event, context, callback) => {
 	async.waterfall(
 		[
 			async.constant(bucketName),
-			createParams, 
 			getLoggingStatus, 
 			enableLogging
 		],
@@ -52,16 +51,11 @@ function printDebugInformation(context) {
 	}
 }
 
-function createParams(bucketName, next) {
-	console.log('Creating parameters for request');
+function getLoggingStatus(bucketName, next) {
+	console.log('Checking logging configuration for bucket: ' + bucketName);
 	var params = {
 		Bucket: bucketName
 	};
-	next(null, bucketName, params);
-}
-
-function getLoggingStatus(bucketName, params, next) {
-	console.log('Checking logging configuration for bucket: ' + bucketName);
 	s3.getBucketLogging(params, function(err, data) {
 		if(err) {
 			// an error occurred
