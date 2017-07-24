@@ -4,10 +4,6 @@ provider:
   name: aws
   runtime: nodejs6.10
 
-# you can overwrite defaults here
-#  stage: dev
-#  region: us-east-1
-
 # add statements to the Lambda function's default IAM Role here
   iamRoleStatements:
     - Effect: "Allow"
@@ -20,17 +16,8 @@ provider:
 #  environment:
 #    variable1: value1
 
-# you can add packaging information here
-#package:
-#  include:
-#    - include-me.js
-#    - include-me-dir/**
-#  exclude:
-#    - exclude-me.js
-#    - exclude-me-dir/**
-
 functions:
-  hello:
+  S3ConfigEnforcer:
     handler: index.handler
     events:
       - cloudwatchEvent:
@@ -46,8 +33,8 @@ functions:
                 - "CreateBucket"
 
 #    Define function environment variables here
-#    environment:
-#      variable2: value2
+    environment:
+      LOG_BUCKET: ${opt:logbucket}
 
 # you can add CloudFormation resource templates here
 #resources:
