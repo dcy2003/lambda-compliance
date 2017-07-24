@@ -12,10 +12,6 @@ provider:
         - "s3:PutBucketLogging"
       Resource: "arn:aws:s3:::*"
 
-# you can define service wide environment variables here
-#  environment:
-#    variable1: value1
-
 functions:
   S3ConfigEnforcer:
     handler: index.handler
