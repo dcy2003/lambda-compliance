@@ -1,4 +1,4 @@
-*[Navigate to subdirectories more detailed READMEs]*
+*[Navigate to subdirectories for more detailed READMEs]*
 
 Repository currently includes:
   - `s3/ensure-logging-enabled`
@@ -10,10 +10,10 @@ Repository currently includes:
 
 Future ideas:
    - Lambda function to notify of globally accessible S3 buckets in account
+   - Lambda function to notify when an AWS Config rule enters noncompliant state
+   - Node.js utility to recursively scan S3 buckets in account and print list of globally accessible objects
    - Lambda function to serve as a cron health check for a REST service
    - Lambda functions to ensure EC2 compliance:
      - presence of tag (e.g. POC)
      - approved AMI
      - approved instance type
-   - Lambda function to notify when an AWS Config rule enters noncompliant state
-   - Node.js utility to recursively scan S3 buckets in account and print list of globally accessible objects
