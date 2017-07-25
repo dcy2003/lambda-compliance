@@ -9,7 +9,11 @@ Automates the configuration of audit logging on newly created S3 buckets
 
 ### Prerequisites
 
-Requires [Node.js](https://nodejs.org/) v6.10.2+ to run.
+  - Requires [Node.js](https://nodejs.org/) v6.10.2+ to run.
+  - Assumes you have the AWS CLI installed, credentials configure, and sufficient permissions assigned.
+  - Be sure CloudTrail is enabled for the AWS account and region.
+
+### Installation
 
 Install the dependencies:
 
@@ -17,8 +21,6 @@ Install the dependencies:
 $ npm install -g serverless
 $ npm install -g mocha
 ```
-
-### Installation
 
 Build: (see `package.json`)
 ```sh
@@ -41,13 +43,14 @@ $ serverless deploy \
 ```
 
 ***Notes:***
+
 `logbucket` is a mandatory parameter
+
 `aws-profile` is optional if you maintain multiple profiles in your `~/.aws/credentials` file 
 
 ### Development
 
 Want to contribute? Great!  Submit a pull request.
-
 
 License
 ----

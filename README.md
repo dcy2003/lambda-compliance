@@ -1,10 +1,12 @@
-Navigate to subdirectories for proper individual READMEs
+*[Navigate to subdirectories more detailed READMEs]*
 
-Currently includes:
+Repository currently includes:
   - `s3/ensure-logging-enabled`
-    - Lambda function to ensure audit logging is enabled on newly created S3 buckets
+    - ensures audit logging is enabled on newly created S3 buckets
+    - uses AWS Lambda and CloudWatch events
+    - easily deployable using Serverless Framework
   - `s3/ensure-versioning-enabled`
-    - (in progress) Lambda function to ensure versioning is enabled on newly created S3 buckets
+    - (in progress) ensures versioning is enabled on newly created S3 buckets
 
 Future ideas:
    - Lambda function to notify of globally accessible S3 buckets in account
