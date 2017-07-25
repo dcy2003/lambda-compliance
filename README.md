@@ -9,7 +9,9 @@ This repository contains a collection of useful solutions for automation within 
     - uses AWS Lambda and CloudWatch events
     - easily deployable using Serverless Framework
   - `s3/ensure-versioning-enabled`
-    - (in progress) ensures versioning is enabled on newly created S3 buckets
+    - ensures versioning is enabled on newly created S3 buckets
+    - uses AWS Lambda and CloudWatch events
+    - easily deployable using Serverless Framework
 
 ### Future ideas:
 
