@@ -4,8 +4,7 @@
   "description": "AWS Lambda function to ensure logging is enabled on an S3 bucket",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "posttest": "zip -rq S3ConfigEnforcer.zip * -x *.zip *.json *.log"
+    "test": "mocha"
   },
   "author": "Derek Yeager",
   "license": "MIT",
