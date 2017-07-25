@@ -1,7 +1,7 @@
 {
-  "name": "s3-logging-enforcer",
+  "name": "s3-versioning-enforcer",
   "version": "1.0.0",
-  "description": "AWS Lambda function to ensure logging is enabled on an S3 bucket",
+  "description": "AWS Lambda function to ensure versioning is enabled on an S3 bucket",
   "main": "index.js",
   "scripts": {
     "test": "mocha"

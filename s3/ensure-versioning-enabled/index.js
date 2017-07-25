@@ -19,7 +19,6 @@ exports.handler = (event, context, callback) => {
 	async.waterfall(
 		[
 			async.constant(bucketName),
-			createParams, 
 			getVersioningStatus, 
 			enableVersioning
 		],
@@ -52,16 +51,11 @@ function printDebugInformation(context) {
 	}
 }
 
-function createParams(bucketName, next) {
-	console.log('Creating parameters for request');
+function getVersioningStatus function(bucketName, next) {
+	console.log('Checking versioning configuration for bucket: ' + bucketName);
 	var params = {
 		Bucket: bucketName
 	};
-	next(null, bucketName, params);
-}
-
-function getVersioningStatus function(bucketName, params, next) {
-	console.log('Checking versioning configuration for bucket: ' + bucketName);
 	s3.getBucketVersioning(params, function(err, data) {
   		if(err) {
   			// an error occurred

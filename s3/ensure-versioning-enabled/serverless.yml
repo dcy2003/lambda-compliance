@@ -1,15 +1,15 @@
-service: s3-ensure-logging-enabled
+service: s3-ensure-versioning-enabled
 provider:
   name: aws
   runtime: nodejs6.10
   iamRoleStatements:
     - Effect: "Allow"
       Action:
-        - "s3:GetBucketLogging"
-        - "s3:PutBucketLogging"
+        - "s3:GetBucketVersioning"
+        - "s3:PutBucketVersioning"
       Resource: "arn:aws:s3:::*"
 functions:
-  S3LoggingEnforcer:
+  S3VersioningEnforcer:
     handler: index.handler
     events:
       - cloudwatchEvent:
@@ -23,5 +23,3 @@ functions:
                 - "s3.amazonaws.com"
               eventName:
                 - "CreateBucket"
-    environment:
-      LOG_BUCKET: ${opt:logbucket}
