@@ -1,8 +1,10 @@
 Navigate to subdirectories for proper individual READMEs
 
 Currently includes:
-   - Lambda function to ensure audit logging is enabled on newly created S3 buckets
-   - (in progress) Lambda function to ensure versioning is enabled on newly created S3 buckets
+  - `s3/ensure-logging-enabled`
+    - Lambda function to ensure audit logging is enabled on newly created S3 buckets
+  - `s3/ensure-versioning-enabled`
+    - (in progress) Lambda function to ensure versioning is enabled on newly created S3 buckets
 
 Future ideas:
    - Lambda function to notify of globally accessible S3 buckets in account
