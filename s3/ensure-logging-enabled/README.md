@@ -1,5 +1,3 @@
-# S3 Bucket Logging Enabler
-
 Automates the configuration of audit logging on newly created S3 buckets
 
    - [CloudWatch Events](http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/WhatIsCloudWatchEvents.html) rule triggers an [AWS Lambda](https://aws.amazon.com/lambda/) function on `s3:CreateBucket` API calls
@@ -46,13 +44,4 @@ $ serverless deploy \
 
 `logbucket` is a mandatory parameter
 
-`aws-profile` is optional if you maintain multiple profiles in your `~/.aws/credentials` file 
-
-### Development
-
-Want to contribute? Great!  Submit a pull request.
-
-License
-----
-
-MIT
+`aws-profile` is optional if you maintain multiple profiles in your `~/.aws/credentials` file

@@ -1,6 +1,9 @@
+This repository contains a collection of useful solutions for automation within an AWS account.
+
 *[Navigate to subdirectories for more detailed READMEs]*
 
-Repository currently includes:
+### Repository currently includes:
+
   - `s3/ensure-logging-enabled`
     - ensures audit logging is enabled on newly created S3 buckets
     - uses AWS Lambda and CloudWatch events
@@ -8,7 +11,8 @@ Repository currently includes:
   - `s3/ensure-versioning-enabled`
     - (in progress) ensures versioning is enabled on newly created S3 buckets
 
-Future ideas:
+### Future ideas:
+
    - Lambda function to notify of globally accessible S3 buckets in account
    - Lambda function to notify when an AWS Config rule enters noncompliant state
    - Node.js utility to recursively scan S3 buckets in account and print list of globally accessible objects
@@ -17,3 +21,12 @@ Future ideas:
      - presence of tag (e.g. POC)
      - approved AMI
      - approved instance type
+
+### Development
+
+Want to contribute? Great!  Submit a pull request.
+
+License
+----
+
+MIT
