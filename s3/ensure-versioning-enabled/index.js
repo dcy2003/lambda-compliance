@@ -51,7 +51,7 @@ function printDebugInformation(context) {
 	}
 }
 
-function getVersioningStatus function(bucketName, next) {
+function getVersioningStatus(bucketName, next) {
 	console.log('Checking versioning configuration for bucket: ' + bucketName);
 	var params = {
 		Bucket: bucketName
