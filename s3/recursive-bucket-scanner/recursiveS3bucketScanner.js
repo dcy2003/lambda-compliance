@@ -1,7 +1,7 @@
 'use strict';
 
 var AWS = require('aws-sdk');
-var _ = require('underscore'); // FIXME lodash-compatible?
+var _ = require('lodash');
  
 var s3 = new AWS.S3();
  
