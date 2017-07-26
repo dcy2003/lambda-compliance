@@ -8,8 +8,6 @@ Recursively scans an S3 bucket and prints a list of globally accessible objects 
 ### Installation
 
 Install the dependencies:
-
-Build: (see `package.json`)
 ```sh
 $ npm install
 ```
