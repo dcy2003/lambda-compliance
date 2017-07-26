@@ -1,0 +1,15 @@
+{
+  "name": "recursive-bucket-scanner",
+  "version": "1.0.0",
+  "description": "recursively scans S3 buckets in an account and prints a list of globally accessible objects",
+  "main": "recursiveS3bucketScanner.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Derek Yeager",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.90.0",
+    "underscore": "^1.8.3"
+  }
+}
