@@ -13,7 +13,7 @@ This repository contains a collection of useful solutions for automation within 
     - uses AWS Lambda and CloudWatch events
     - easily deployable using Serverless Framework
   - `s3/recursive-bucket-scanner`
-    - (in progress) Node.js utility to recursively scan an S3 bucket and print list of globally accessible objects
+    - Node.js utility to recursively scan an S3 bucket and print list of globally accessible objects
 
 ### Future ideas:
 
