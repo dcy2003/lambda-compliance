@@ -8,7 +8,7 @@ Automates the configuration of audit logging on newly created S3 buckets
 ### Prerequisites
 
   - Requires [Node.js](https://nodejs.org/) v6.10.2+ to run.
-  - Assumes you have the AWS CLI installed, credentials configured, and sufficient permissions assigned.
+  - Install AWS CLI, configure access keys, and grant sufficient permissions.
   - Be sure CloudTrail is enabled for the AWS account and region.
 
 ### Installation
@@ -28,8 +28,6 @@ $ npm install
 Test: (see `test.js`)
 ```sh
 $ npm test
-OR
-$ mocha
 ```
 
 Deploy: (see `serverless.yml`)

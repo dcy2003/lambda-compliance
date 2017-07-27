@@ -3,7 +3,7 @@ Recursively scans an S3 bucket and prints a list of globally accessible objects 
 ### Prerequisites
 
   - Requires [Node.js](https://nodejs.org/)
-  - Assumes you have the AWS CLI installed, credentials configured, and sufficient permissions assigned.
+  - Install AWS CLI, configure access keys, and grant sufficient permissions.
 
 ### Installation
 
@@ -23,4 +23,5 @@ Be sure to pass the name of the S3 bucket to scan as a command line argument
 
 ### TODO
 
-Unit Tests
+Check Bucket Itself
+Tests
