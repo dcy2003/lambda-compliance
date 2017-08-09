@@ -1,0 +1,29 @@
+service: open-bucket-notifier
+provider:
+  name: aws
+  runtime: nodejs6.10
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "sns:Publish"
+      Resource: ${opt:snsTopicArn}
+functions:
+  S3OpenBucketNotifier:
+    handler: index.handler
+    events:
+      - cloudwatchEvent:
+          event:
+            source:
+              - "aws.s3"
+            detail-type:
+              - "AWS API Call via CloudTrail"
+            detail:
+              eventSource:
+                - "s3.amazonaws.com"
+              eventName:
+                - "CreateBucket"
+                - "DeleteBucketPolicy"
+                - "PutBucketAcl"
+                - "PutBucketPolicy"
+    environment:
+      SNS_TOPIC_ARN: ${opt:snsTopicArn}
