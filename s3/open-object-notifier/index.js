@@ -16,8 +16,8 @@ exports.handler = (event, context, callback) => {
 	printDebugInformation(context);
 	console.log('Received event:', JSON.stringify(event, null, 2));
 	var bucketName = event.detail.requestParameters.bucketName;
-	console.log('bucketName = ' + bucketName);
 	var objectKey = event.detail.requestParameters.key;
+	console.log('bucketName = ' + bucketName);
 	console.log('objectKey = ' + objectKey);
 	checkObjectAcl(bucketName, objectKey, context, callback);
 };
@@ -54,7 +54,7 @@ function checkObjectAcl(bucketName, objectKey, context, callback) {
 
 function publishToSns(bucketName, objectKey, msg, context) {
 	var subj = 'ALERT: S3 object ' + objectKey + ' in bucket ' + bucketName + ' is globally accessible!';
-	var msg = '';
+	console.log(subj);
 	var params = {
         Message: msg, 
         Subject: subj,
