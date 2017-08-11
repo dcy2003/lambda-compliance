@@ -1,0 +1,30 @@
+service: open-object-notifier
+provider:
+  name: aws
+  runtime: nodejs6.10
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "sns:Publish"
+      Resource: ${opt:snsTopicArn}
+    - Effect: "Allow"
+      Action:
+        - "s3:GetObjectAcl"
+      Resource: "*"
+functions:
+  S3OpenBucketNotifier:
+    handler: index.handler
+    events:
+      - cloudwatchEvent:
+          event:
+            source:
+              - "aws.s3"
+            detail-type:
+              - "AWS API Call via CloudTrail"
+            detail:
+              eventSource:
+                - "s3.amazonaws.com"
+              eventName:
+                - "PutObjectAcl"
+    environment:
+      SNS_TOPIC_ARN: ${opt:snsTopicArn}
